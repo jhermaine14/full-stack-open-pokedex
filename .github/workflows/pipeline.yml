@@ -9,5 +9,11 @@ jobs:
   lint_job:
     runs-on: ubuntu-20.04
     steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      - name: Install dependencies
+        run: npm install
       - name: Lint
         run: npm run eslint
