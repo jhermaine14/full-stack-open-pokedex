@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v2
+      - name: Check Directory contents
+        run: ls
       - name: Move to the project directory
         run: cd ./full-stack-open-pokedex
       - name: Set up Node.js
