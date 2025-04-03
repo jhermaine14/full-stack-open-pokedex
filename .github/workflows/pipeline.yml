@@ -1,0 +1,13 @@
+name : Lint Workflow
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  lint_job:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Lint
+        run: npm run eslint
