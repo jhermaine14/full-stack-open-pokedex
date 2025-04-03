@@ -9,6 +9,10 @@ jobs:
   lint_job:
     runs-on: ubuntu-20.04
     steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+      - name: Move to the project directory
+        run: cd full-stack-open-pokedex
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
